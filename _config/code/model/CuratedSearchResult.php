@@ -46,5 +46,10 @@ class CuratedSearchResult extends DataObject
 		return $fields;
 	}
 
+	public function onBeforeWrite() {
+		$this->Sort = 99;	//@todo do this more intelligently
+		parent::onBeforeWrite();
+	}
+
 
 }
